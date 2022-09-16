@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WOT Player Statistics</title>
+  <meta name="description" content="Overview of player statistics in the game World of Tanks" />
+  <meta name="keywords" content="wot, player, statistics, world of tanks" />
+  <meta name="author" content="Goran Kekez" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+
+  <div class="logo">
+    <img src="img/logo.png" alt="World of Tanks">
+  </div>
+
+  <main>
+    <div class="container">
+      <h1>Player Statistics</h1>
+      <form>
+        <div class="form-control">
+          <label for="searchPl">Player Search</label>
+          <input type="text" id="searchPl" placeholder="enter username">
+          <input type="submit" class="btn" id="search-players" value="Search">
+        </div>
+      </form>
+    </div>
+
+    <div id="player-results"></div>
+
+    <div id="player-username-holder">
+      <!-- USER WIDGET -->
+      <span id="player-username" class="ccw-word" data-type="user_wot__eu"></span>
+    </div>
+    <div id="rating"></div>
+    <div id="player-ratings-btn"></div>
+    <div id="player-rating-text"></div>
+
+  </main>
+
+  <div class="tankAnimation">
+    <img id="tankAnimation" src="img/tankAnime.png" alt="Tank">
+  </div>
+  <!-- Main Footer -->
+  <footer id="myFooter">
+    <small>&copy; 2022 WOT Player Statistics by
+      <a target="_blank" href="https://webdizajnmaxi.eu.org/">Maxi</a>. All Rights
+      Reserved.</small>
+  </footer>
+  <!-- Main Footer END-->
+
+  <!-- CCW loader WOT -->
+  <script type="text/javascript">
+    (function (w, d, s, p) {
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        i;
+      j.async = true;
+      j.src = '//' + p['server'] + '/compiled/loader.min.js';
+      j.setAttribute('id', 'ccw-loader');
+      for (i in p) {
+        if (p.hasOwnProperty(i)) {
+          j.setAttribute('data-' + i, p[i]);
+        }
+      }
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', {
+      'server': 'ccw-center.wargaming.net',
+      'language': 'en',
+      'service': 'service_name'
+    });
+  </script>
+  <!-- /CCW loader WOT END -->
+
+  <script src="js/main.js"></script>
+  <noscript>JavaScript not enabled!</noscript>
+</body>
+
+</html>
